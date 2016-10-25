@@ -1,0 +1,75 @@
+<!-- Border Radius Coding Challenge by Frank Mullen -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Box Model</title>
+	<style type="text/css">
+		/*CSS here*/
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: #3FFF33;
+			margin: 50px;
+			border: 10px dashed #050611;
+			border-radius: 30px;
+		}
+		.doublebox {
+			width: 200px;
+			height: 200px;
+			background-color: #3FFF33;
+			margin: 50px;
+			border-style: double;
+			border-width: 20px;
+			border-color: #ffffff;
+			border-radius: 30px;
+		}
+
+		#box2 {
+			border-radius:200px;
+		}
+		#box3 {
+			border-style: solid;
+		}
+		#box4 {
+			border-style: solid;
+			border-radius: 0px;
+		}
+		#box5 {
+			background-color: white;
+			border: 20px solid red;
+			border-radius: 50%;
+		}
+		#box7 {
+			border-radius: 0%;
+			border-top-right-radius: 15%;
+			border-bottom-left-radius: 15%;
+		}
+		#box8 {
+			border-top-style: none;
+			border-bottom-style: none;
+		}
+		#box9 {
+			border-radius: 120px/30px;
+		}
+		#box10 {
+			background-color: yellow;
+			border: 1px solid #F0D900;
+			border-radius: 10px 150px 30px 150px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box1"></div>
+	<div class="box" id="box2"></div>
+	<div class="box" id="box3"></div>
+	<div class="box" id="box4"></div>
+	<div class="box" id="box5"></div>
+	<div class="doublebox" id="box6"></div>
+	<div class="doublebox" id="box7"></div>
+	<div class="doublebox" id="box8"></div>
+	<div class="doublebox" id="box9"></div>
+	<div class="box" id="box10"></div>
+</body>
+</html>
