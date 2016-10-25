@@ -19,7 +19,7 @@ Create a HTML page called box.html using this template:
 
 Inside the <head> and between the <style> tags, create a CSS class named box with the following CSS rules:
 
-```html
+```css
 .box{
         width:300px;   
         height: 300px;
