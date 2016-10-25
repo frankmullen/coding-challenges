@@ -1,3 +1,5 @@
+# Challenge
+
 Let’s continue from the previous exercise and explore fixed positioning. We will change the position of the header to fixed.
 
 - First, we will setup the document. Create more content (another sidebar & content), otherwise it will be difficult to see the effect of the fixed positioning as we need some scrolling to take place.
