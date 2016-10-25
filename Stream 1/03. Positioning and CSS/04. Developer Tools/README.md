@@ -1,5 +1,8 @@
 # Challenge
 
+**NOTE:** There is no solution for this Challenge, as it was done using 
+Chrome Developer Tools.
+
 - Open up Developer Tools in Chrome.
 
 - Using your new toolbox, select HTML elements and alter their CSS rules in the browser.
