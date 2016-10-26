@@ -1,0 +1,75 @@
+<!-- Positioning Challenge by Frank Mullen -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+
+		body{
+				font-family: roboto;
+			}
+
+		#container {
+			position: relative;
+			margin-top:100px;
+			margin-right: auto;
+			margin-left: auto;
+			width: 600px;
+			height: 400px;
+			background-color: #AA4639;
+			font-size: 0; /*to get rid of the white space between elements*/
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		.box {
+			position:absolute;
+			display: block;
+			width: 220px;
+			height: 150px;
+			text-align:center;
+			background-color: #81BBC9;
+			margin: 5px;
+			border-radius: 10px;
+			font-size: 35px;
+
+		}
+		#box1 {
+			/*top:(400+10+10-150-150-5-5)/2 */
+			top:55px;
+			/*left:(600+10+10-220-220-5-5)/2 */
+			left:85px;
+			
+		}
+		
+		#box2 {
+			top:55px;
+			right:85px;
+			
+		}
+
+		#box3 {
+			bottom:55px;
+			right:85px;
+			
+		}
+		
+		#box4 {
+			bottom:55px;
+			left:85px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="box" id="box1"><h2>1</h2></div>
+		<div class="box" id="box2"><h2>2</h2></div>
+		<div class="box" id="box3"><h2>4</h2></div>
+		<div class="box" id="box4"><h2>3</h2></div>
+	</div>
+
+</body>
+</html>
