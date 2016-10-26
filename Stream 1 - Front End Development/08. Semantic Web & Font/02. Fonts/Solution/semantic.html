@@ -1,0 +1,158 @@
+<!-- Semantic Web Challenge by Frank Mullen -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Semantic Web</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<style type="text/css">
+		
+		body {
+			background-color: #F5D76E;
+		}
+
+		nav{
+			font-family: roboto;
+			margin: 30px auto;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items:stretch;
+			border-radius: 10px;
+			padding: 0;	
+		}
+				
+		a{
+			text-decoration: none;
+			color: white;
+			flex:1;
+			height: 30px;
+			font-family: Dosis;
+			padding:20px 20px 20px 20px;
+			text-align: center;
+			font-size: 2em;
+			border:1px solid white;
+
+		}
+		#logoNav{
+			font-size: 2em;
+			font-weight: bold;
+			}
+
+		#landing {
+			display: flex;
+			flex-direction:column;
+			justify-content: center;
+			align-items: center;
+		}
+		#landing-message {
+			font-size:50px;
+			font-family:dosis;
+			text-align: center;
+			margin: 50px 20px;
+		}
+
+		.cards{
+        	display:flex;
+        	flex-direction: column;
+        	justify-content: space-around;
+        	
+        	margin:20px;
+
+		}
+		.card{
+        	background-color: #EAEAEA;
+        	margin:20px;
+        	padding:10px;
+        	flex:1;
+		}
+		.card h2{
+        	font-family:dosis;
+        	font-size:30px;
+        	padding: 10px 0px;
+		}
+		.card img{
+        	width:100%;
+        }
+		.card p{
+       	 	font-family: dosis;
+       	 	font-size: 18px;
+       	 	padding: 10px 0px;
+		}
+
+		/* ------------------Desktop------------------------*/
+
+		@media screen and (min-width: 700px){
+			nav{
+				width:90%;
+				flex-direction: row;
+				/* gets the text on the bottom of the cells */
+				align-items: baseline;
+			}
+			a{
+				border:none;
+				font-size:25px;
+				padding-bottom:none;
+
+			}
+			#logoNav{
+				flex:5;
+				text-align: left;
+			}
+			#landing {
+				flex-direction: row;
+				width:80%;
+				margin: 100px auto;
+			}
+
+			
+		}
+
+
+		</style>
+</head>
+<body>
+
+	<nav>
+		
+			<a id="logoNav">CHOCOBLOCK</a>
+			<a href="#">Home</a>
+			<a href="#">Projects</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Photos</a>
+		
+
+	</nav>
+	<section id="landing">
+		<div id="landing-message"><h2>Make Creative Clever Fun Apps Simple.</h2></div>
+		<div id="landing-graphic"><img src="images/semantic/laptop.png" width="400px"></div>
+	</section>
+
+	<section class="cards">
+        <div class="card">
+                <img src="images/semantic/graphic1.png" alt="design pic">
+                <h2>Remote Learning</h2>
+                <p>Once you join a Code Institute Bootcamp you will be taken on an accelerated contextualised learning
+                path across 3 streams.</p>
+        </div>
+
+        <div class="card">
+                <img src="images/semantic/graphic2.png" alt="design pic">
+                <h2>Web Info Sessions</h2>
+                <p>If you have questions about your career in coding, you can attend one of our open evenings.</p>
+        </div> 
+
+        <div class="card">
+                <img src="images/semantic/graphic3.png" alt="design pic">
+                <h2>Great Career Prospects</h2>
+                <p>There will be talks by industry professionals 
+                and career guidance experts. You will meet everybody you need to know and will end up with a job with an average salary of €30,000.</p>
+        </div> 
+</section>
+
+</body>
+</html>
