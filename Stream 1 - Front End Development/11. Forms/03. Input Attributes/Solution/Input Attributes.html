@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="UTF-8">
+      <title>Form</title>
+      <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+   
+      <!--
+         Form with HTML5 tags and basic CSS
+      -->
+      <style type="text/css">
+
+      body{
+         font-family: 'Roboto', sans-serif;
+      }
+         #container{
+            width: 550px;
+            margin: auto;
+
+         }
+
+         legend{
+            font-size: 30px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #999;
+            padding: 4px 15px;
+         }
+            
+         label.field{
+            display: block;
+            text-align: right;
+            width: 100px;
+            float: left;
+
+         }
+         input{
+            width: 200px;
+            border-radius: 5px;
+            padding: 6px 8px;
+         }
+         .field{
+            padding: 6px 8px;
+         }
+
+         #currency{
+             width: 220px;
+             border-radius: 5px;
+             padding: 6px 8px;
+         }
+
+         fieldset{
+            width: 450px;
+            border: 1px solid #999;
+            border-radius: 20px;
+            clear: both;
+            padding: 20px;
+            margin-bottom: 100px;
+            background-color:rgba(129, 187, 201,.2);
+
+         }
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <form>
+            <fieldset>
+               <legend>Registration</legend>
+
+               <label for="fname" class="field">* Firstname:</label>
+               <input required="" type="text" name="fname" placeholder="First Name" id="fname"/>
+
+               <label for="password" class="field">Password:</label>
+               <input id="password" name="password" type="password" placeholder="Minimum 8 Characters"/>
+
+               <label for="email" class="field">* Email:</label>
+               <input required="" id="email" name="email"  type="email" autofocus placeholder="Email"/>
+
+               <label for="telephone" class="field">Telephone:</label>
+               <input id="telephone" name="telephone" placeholder="Mobile Number" type="number"/>
+
+               <label for="website" class="field">Website:</label>
+               <input name="website"  type="url" placeholder="Website URL" id="website" />
+
+               <label for="submit" class="field">
+               <input type="submit" value="submit" id="submit"/></label>
+            </fieldset>
+         </form>
+         
+      	
+    </div>
+   </body>
+
+</html>
