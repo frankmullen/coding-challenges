@@ -68,7 +68,7 @@
                <legend>Registration</legend>
 
                <label for="fname" class ="field">* Firstname:</label>
-               <input required="" type="text" name="fname" placeholder="First Name" id="fname" />
+               <input required type="text" name="fname" placeholder="First Name" id="fname" />
                
                <label for="age" class ="field">Age:</label>
                <input id="age" name="age" placeholder="enter your age" type="number" min="0" max="100"/>
@@ -84,6 +84,9 @@
                
                <label for="eircode" class ="field">Eircode:</label>
                <input id="eircode" name="eircode" type="text" placeholder="eircode " pattern="[0-9A-Za-z]{7}" title="Seven character alpha-numeric code."/>
+
+               <label for="date" class="field"> Date:</label>
+               <input id="date" name="date" type="date" />
                
                <label for="website" class ="field">Website:</label>
                <input name="website"  type="url" placeholder="Website URL" id="website" />
@@ -91,9 +94,62 @@
                <label for="passport" class ="field">Passport:</label>
                <input type="text" name="passport" placeholder="Passport Number" pattern="[0-9]{7}[A-Za-z]{1}" title="Seven numbers followed by a single upper or lower case letter." id="passport">
                
-               <label for="creditcard" class ="field">Credit Card:</label>
+               <label for="creditcard" class="field">Credit Card:</label>
                <input type="text" name="creditcard" placeholder="Credit Card Number" pattern="[0-9]{16}" title="Sixteen numbers with no spaces." id="creditcard">
                
+               <section>
+               <label class="field">Meal Type</label>
+               <label for="starter"></label>
+               <input type="checkbox" value="starter" id="starter"/>Starter
+               <label for="main"></label>
+               <input type="checkbox" value="main" id="main" />Main Course
+               <label for="dessert"></label>
+               <input type="checkbox" value="dessert" id="dessert" />Dessert
+               </section>
+
+               <section>
+               <label for="gender" class="field"> Gender:</label>
+                    <label for="male"> </label>
+                    <input id="male" type="radio" name="gender" value="male" />Male
+                    <label for="female"> </label>
+                    <input id="male" type="radio" name="gender" value="female" />Female
+                    <label for="other"> </label>
+                    <input id="male" type="radio" name="gender" value="other" />Other
+               </section>
+
+               <section id="dropdown">
+                    <label for="zodiac_signs" class="field">Zodiac signs</label>
+                    <select id="zodiac_signs">
+                        <option value="aries">Aries</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="cancer">Cancer</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="leo">Leo</option>
+                        <option value="scorpio">Scorpio</option>
+                        <option value="sagittarius">Sagittarius</option>
+                        <option value="capricorn">Capricorn</option>
+                        <option value="aquarius">Aquarius</option>
+                        <option value="pisces">Pisces</option>
+                    </select>
+                </section>
+
+                <section id="datalist">
+                    <label for="music_genre" class="field">Music Genre:</label>
+                    <input id="music_genre" list="music_genre" name="music_genre" placeholder="type for autofill selections">
+                    <datalist id="music_genre">
+                        <option value="Indie">
+                        <option value="Dance">
+                        <option value="Folk">
+                        <option value="Rock">
+                        <option value="Punk">
+                    </datalist>
+                </section>
+
+                <section id="range">
+                    <label for="range" class="field">Range: </label>
+                    <input id="range" type="range" name="range" min="0" max="11">
+                </section>
+
                <label for="submit" class ="field">
                <input type="submit" value="submit" id="submit" /></label>
             </fieldset>
