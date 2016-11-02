@@ -37,6 +37,13 @@
 	background-color: #fff;
 }
 
+.makeRed {
+	background-color: red;
+}
+
+.makeBorder {
+	border: 2px solid black;
+}
 
 /*************************
 Navigation
