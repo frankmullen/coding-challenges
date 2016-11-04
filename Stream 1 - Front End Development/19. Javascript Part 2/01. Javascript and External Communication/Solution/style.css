@@ -1,0 +1,14 @@
+a {
+    padding: 0.2em;
+}
+a:hover {
+    background-color: #02AAEE;
+}
+#output {
+    display: block;
+    margin-top: 8px;
+    padding: 1%;
+    border: 1px solid #666;
+    background-color: #efefef;
+    
+}

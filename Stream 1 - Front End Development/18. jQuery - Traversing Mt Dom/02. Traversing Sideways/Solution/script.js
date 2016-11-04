@@ -15,6 +15,24 @@ $(document).ready(function() {
 	$("p").on("click", function() {
 		$(this).children("a").css("background-color", "yellow");
 	});
+
+	$("img").on("click", function() {
+		$(this).next().children('p').slideDown();
+		
+	});
+
+	$(".card").on("click", function() {
+		$(this).toggleClass("addPink");
+	});
+ 	
+ 	$("#navSelect").on("click", function() {
+		$(".card:not(.addPink)").hide();
+ 	});
+
+ 	$("#navAll").on("click", function() {
+ 		$(".card").show();
+ 	})
+
  	
 }); 
 
