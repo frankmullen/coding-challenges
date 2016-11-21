@@ -1,0 +1,23 @@
+{
+  "name": "angular-todo",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Frank Mullen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/frankmullen/angular-todo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "a0-angular-storage": "^0.0.15"
+  }
+}
