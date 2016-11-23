@@ -4,6 +4,8 @@ from string import ascii_uppercase
 
 
 class TestBoggle(unittest.TestCase):
+
+    # test to make sure test_boggle is hooked up to boggle
     def test_Is_This_Thing_On(self):
         self.assertEqual(1, boggle.check())
 
@@ -71,6 +73,3 @@ class TestBoggle(unittest.TestCase):
     def test_load_dictionary(self):
         dictionary = boggle.get_dictionary('/usr/share/dict/words')
         self.assertGreater(len(dictionary), 0)
-
-
-
