@@ -20,10 +20,7 @@ while True:
         if possible_location:
             print 'to the %s is a %s' % (k, possible_location)
             valid_directions[k] = possible_position
-
-    # print map
-    for k, v in valid_directions.iteritems():
-        print locations.get(v)
+            print valid_directions
 
 
     direction = raw_input('which direction do you want to go?\n')
@@ -32,4 +29,8 @@ while True:
         position = new_position
     else:
         print "sorry, that isn't a valid direction"
+
+#list1
+#if 0 on first piece, print on first line
+#if 1 on first piece, print on second line
 

@@ -67,4 +67,5 @@ def display_words(dictionary, grid):
     print "Found {0} words".format(len(words))
 
 
-main()
+if __name__ == "__main__":
+   main()
