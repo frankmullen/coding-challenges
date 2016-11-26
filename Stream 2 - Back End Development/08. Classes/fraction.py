@@ -4,54 +4,75 @@ from decimal import Decimal
 class Fraction:
 
     def __init__(self, numerator, denominator):
-
+        # tuple to make a fraction of the numerator
         fractionNum = (0, 0)
+
+        # tuple to make a fraction of the denominator
         fractionDen = (0, 0)
 
+        # check if numerator or denominator are float
         if isinstance(numerator, float) or isinstance(denominator, float):
 
+            # get fraction for numerator
             if isinstance(numerator, float):
 
+                # multiplying variable
                 i = 2
+                # multiply numerator until it becomes a whole number
                 newNum = numerator*i
 
                 while True:
-
-                    if newNum % 1 == 0:
-
+                    # check if whole number (account for floating point error)
+                    if float(Decimal(str(newNum % 1))) == 0:
+                        # change tuple for the numerator fraction
                         fractionNum = (numerator*i, i)
                         break
                     else:
+                        # continue multiplication loop
                         i += 1
                         newNum += numerator
 
+            # get fraction for denominator
             if isinstance(denominator, float):
 
+                # multiplying variable
                 i = 2
+                # multiply denominator until it becomes a whole number
                 newNum = denominator * i
 
                 while True:
-
-                    if newNum % 1 == 0:
+                    # check if whole number (account for floating point error)
+                    if float(Decimal(str(newNum % 1))) == 0:
+                        # change tuple for the denominator fraction
                         fractionDen = (denominator * i, i)
                         break
                     else:
+                        # continue multiplication loop
                         i += 1
                         newNum += denominator
+                        # print statements to check if floating point error is fixed
+                        print 'newNum: ' + str(newNum)
+                        print float(Decimal(str(newNum % 1)))
 
+            # if numerator int, convert to fraction
             if fractionNum == (0,0):
                 fractionNum = (numerator, 1)
 
+            # if denominator int, convert to fraction
             if fractionDen == (0,0):
                 fractionDen = (denominator, 1)
 
+            # amend numerator and denominator by diving out
             self.num = fractionNum[0] * fractionDen[1]
             self.den = fractionNum[1] * fractionDen[0]
+
+            # account for gcd
             divisor = gcd(self.num, self.den)
             self.num = int(self.num/divisor)
             self.den = int(self.den/divisor)
 
         else:
+            # if both numbers are ints
             self.num = int(numerator/gcd(numerator, denominator))
             self.den = int(denominator/gcd(numerator, denominator))
 
@@ -103,7 +124,7 @@ class Fraction:
         else:
             return 'greater than: false'
 
-f1 = Fraction(0.2, 0.5)
+f1 = Fraction(0.2, 0.7)
 f2 = Fraction(0.8, 1)
 print 'addition: ' + str(f1 + f2)
 print 'subtraction: ' + str(f1 - f2)
