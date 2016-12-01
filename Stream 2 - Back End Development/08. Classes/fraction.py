@@ -23,7 +23,7 @@ class Fraction:
 
                 while True:
                     # check if whole number (account for floating point error)
-                    if float(Decimal(str(newNum % 1))) == 0:
+                    if Decimal(str(newNum)) % 1 == 0:
                         # change tuple for the numerator fraction
                         fractionNum = (numerator*i, i)
                         break
@@ -32,7 +32,7 @@ class Fraction:
                         i += 1
                         newNum += numerator
                         print 'newNum: ' + str(newNum)
-                        print 'float(Decimal(str(newNum % 1)):' + str(float(Decimal(str(newNum % 1))))
+                        print 'float(Decimal(str(newNum % 1)):' + str(Decimal(str(newNum)) % 1)
 
             # get fraction for denominator
             if isinstance(denominator, float):
@@ -44,7 +44,7 @@ class Fraction:
 
                 while True:
                     # check if whole number (account for floating point error)
-                    if float(Decimal(str(newNum % 1))) == 0:
+                    if Decimal(str(newNum)) % 1 == 0:
                         # change tuple for the denominator fraction
                         fractionDen = (denominator * i, i)
                         break
@@ -54,7 +54,7 @@ class Fraction:
                         newNum += denominator
                         # print statements to check if floating point error is fixed
                         print 'newNum: ' + str(newNum)
-                        print 'float(Decimal(str(newNum % 1)):' + str(float(Decimal(str(newNum % 1))))
+                        print 'float(Decimal(str(newNum % 1)):' + str(Decimal(str(newNum)) % 1)
 
             # if numerator int, convert to fraction
             if fractionNum == (0,0):
@@ -126,7 +126,7 @@ class Fraction:
         else:
             return 'greater than: false'
 
-f1 = Fraction(5, 0.7)
+f1 = Fraction(5, 0.73)
 f2 = Fraction(1, 4)
 print 'addition: ' + str(f1 + f2)
 print 'subtraction: ' + str(f1 - f2)
