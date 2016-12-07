@@ -1,0 +1,1 @@
+SELECT DISTINCT(person_id) FROM mydb.orders;
