@@ -27,6 +27,7 @@ div{
 }
 .bottom_button{
 	display: flex;
+	display: -webkit-flex,
 	box-sizing:border-box;
 	border-radius: 4px;
 	display: block;
@@ -41,19 +42,25 @@ div{
 
 .card_bottom{
 	display: flex;
+	display: -webkit-flex;
 	flex-flow:column;
+	-webkit-flex-flow:column;
 }
 .card_head{
 	flex:0;
+	-webkit-flex:0;
 }
 .card_para{
 	flex:1 0 auto;
+	-webkit-flex:1 0 auto;
 }
 
 #container
 {
 	display: flex;		/* makes container a flexbox*/
+	display: -webkit-flex;
 	flex-flow: row wrap; 	/* layout the boxes in rows and wrap them*/
+	-webkit-flex-flow: row wrap;
 	box-sizing:border-box;
 	margin-right:auto;
 	margin-left:auto;
@@ -66,8 +73,11 @@ div{
 
 .card{
 	flex:1; /* */
+	-webkit-flex: 1;
 	display: flex;	/* make the contents controllable by flexbox*/
+	-webkit-display: flex;
 	flex-flow:column;	/* */
+	-webkit-flex-flow:column;
 	min-width: 240px; /**/
 	margin: 10px;
 	padding: 20px;
@@ -104,8 +114,11 @@ nav{
 }
 ul{
 	display: flex;
+	display: -webkit-flex;
 	justify-content:space-between;
+	-webkit-justify-content:space-between;
 	flex-flow: row;
+	-webkit-flex-flow: row;
 	/*flex-flow: row-reverse;*/
 	/*justify-content:flex-end;*/
 	/*justify-content:space-around;*/
@@ -117,6 +130,7 @@ ul{
 }
 li{
 	flex:1;
+	-webkit-flex:1;
 	height: 30px;
 	/*width:10%;*/
 	/*border:2px solid #000;*/
@@ -130,6 +144,7 @@ li{
 
 #logoNav{
 	flex:6;
+	-webkit-flex:6;
 	text-align: left;
 	font-size: 2em;
 	font-weight: bold;
@@ -146,6 +161,7 @@ li{
 @media screen and (max-width: 700px){
 	ul{
 		flex-flow: column;
+		-webkit-flex-flow: column;
 		align-items:center;
 	}
 	li{

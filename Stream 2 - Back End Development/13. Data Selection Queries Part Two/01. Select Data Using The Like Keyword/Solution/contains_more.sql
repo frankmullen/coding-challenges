@@ -1,0 +1,1 @@
+SELECT * FROM mydb.articles WHERE content LIKE '%more%';

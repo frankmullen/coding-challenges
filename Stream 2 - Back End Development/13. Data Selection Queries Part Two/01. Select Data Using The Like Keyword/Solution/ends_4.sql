@@ -1,0 +1,1 @@
+SELECT * FROM mydb.articles WHERE title LIKE '%4';

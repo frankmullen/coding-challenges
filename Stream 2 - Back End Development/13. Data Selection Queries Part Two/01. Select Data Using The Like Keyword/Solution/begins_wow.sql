@@ -1,0 +1,1 @@
+SELECT * FROM mydb.articles where content like 'wow%';

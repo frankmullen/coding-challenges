@@ -1,1 +1,0 @@
-SELECT * FROM articles WHERE content LIKE '%more%';

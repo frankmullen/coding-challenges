@@ -1,1 +1,0 @@
-SELECT * FROM articles where content like 'wow%';
