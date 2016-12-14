@@ -73,5 +73,6 @@ for result in ascending_results:
 # Delete a record from the database
 db.delete('orders', id="=3")
 
+
 # We can also use multiple WHERE clauses!
 db.delete('orders', id=">4", amount=">1")
