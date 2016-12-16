@@ -1,0 +1,184 @@
+frank:~ frankmullen$ mongo
+MongoDB shell version v3.4.0
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.0
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	http://docs.mongodb.org/
+Questions? Try the support group
+	http://groups.google.com/group/mongodb-user
+Server has startup warnings: 
+2016-12-14T13:46:26.661+0000 I CONTROL  [initandlisten] 
+2016-12-14T13:46:26.661+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2016-12-14T13:46:26.661+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2016-12-14T13:46:26.661+0000 I CONTROL  [initandlisten] 
+2016-12-14T13:46:26.661+0000 I CONTROL  [initandlisten] 
+2016-12-14T13:46:26.661+0000 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+> db.myFirstMDB.insert({
+...     first: 'john',
+...     last: 'lennon',
+...     dob: '09/10/1940',
+...     gender: 'm',
+...     hair_colour: 'brown',
+...     occupation: 'beatle',
+...     nationality: 'english'
+... });
+db.myFirstMDB.insert({
+    first: 'kate',
+    last: 'bush',
+    dob: '30/07/1958',
+    gender: 'f',
+    hair_colour: 'brown',
+    occupation: 'singer',
+    nationality: 'english'
+});
+db.myFirstMDB.insert({
+    first: 'eve',
+    last: 'ryan',
+    dob: '19/09/1992',
+    gender: 'f',
+    hair_colour: 'pink',
+    occupation: 'developer',
+    nationality: 'irish'
+});
+db.myFirstMDB.insert({
+    first: 'martha',
+    last: 'fenton',
+    dob: '15/05/1974',
+    gender: 'f',
+    hair_colour: 'brown',
+    occupation: 'manager',
+    nationality: 'irish'
+});
+db.myFirstMDB.insert({
+    first: 'Neil',
+    last: 'Hanslem',
+    dob: '14/07/1983',
+    gender: 'm',
+    hair_colour: 'blonde',
+    occupation: 'actor',
+    nationality: 'english'
+});
+db.myFirstMDB.insert({
+    first: 'Rocky',
+    last: 'Persolm',
+    dob: '19/12/1994',
+    gender: 'f',
+    hair_colour: 'black',
+    occupation: 'activist',
+    nationality: 'american'
+});WriteResult({ "nInserted" : 1 })
+> db.myFirstMDB.insert({
+...     first: 'kate',
+...     last: 'bush',
+...     dob: '30/07/1958',
+...     gender: 'f',
+...     hair_colour: 'brown',
+...     occupation: 'singer',
+...     nationality: 'english'
+... });
+WriteResult({ "nInserted" : 1 })
+> db.myFirstMDB.insert({
+...     first: 'eve',
+...     last: 'ryan',
+...     dob: '19/09/1992',
+...     gender: 'f',
+...     hair_colour: 'pink',
+...     occupation: 'developer',
+...     nationality: 'irish'
+... });
+WriteResult({ "nInserted" : 1 })
+> db.myFirstMDB.insert({
+...     first: 'martha',
+...     last: 'fenton',
+...     dob: '15/05/1974',
+...     gender: 'f',
+...     hair_colour: 'brown',
+...     occupation: 'manager',
+...     nationality: 'irish'
+... });
+WriteResult({ "nInserted" : 1 })
+> db.myFirstMDB.insert({
+...     first: 'Neil',
+...     last: 'Hanslem',
+...     dob: '14/07/1983',
+...     gender: 'm',
+...     hair_colour: 'blonde',
+...     occupation: 'actor',
+...     nationality: 'english'
+... });
+WriteResult({ "nInserted" : 1 })
+> db.myFirstMDB.insert({
+...     first: 'Rocky',
+...     last: 'Persolm',
+...     dob: '19/12/1994',
+...     gender: 'f',
+...     hair_colour: 'black',
+...     occupation: 'activist',
+...     nationality: 'american'
+... });
+WriteResult({ "nInserted" : 1 })
+> db.myFirstMDB.find()
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2c"), "first" : "kate", "last" : "bush", "dob" : "30/07/1958", "gender" : "f", "hair_colour" : "brown", "occupation" : "singer", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "pink", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "brown", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.find({gender: 'f'});
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2c"), "first" : "kate", "last" : "bush", "dob" : "30/07/1958", "gender" : "f", "hair_colour" : "brown", "occupation" : "singer", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "pink", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "brown", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.find({gender: 'm'});
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+> db.myFirstMDB.find({gender: 'f', $or: [{nationality: 'american'}, {nationality: 'irish'}]});
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "pink", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "brown", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.find().sort({nationality: 1})
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2c"), "first" : "kate", "last" : "bush", "dob" : "30/07/1958", "gender" : "f", "hair_colour" : "brown", "occupation" : "singer", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "pink", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "brown", "occupation" : "manager", "nationality" : "irish" }
+> db.myFirstMDB.find().sort({nationality: -1})
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "pink", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "brown", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2c"), "first" : "kate", "last" : "bush", "dob" : "30/07/1958", "gender" : "f", "hair_colour" : "brown", "occupation" : "singer", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.update({nationality: 'irish'}, {$set: {hair_colour: 'blue'}});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.myFirstMDB.find()
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2c"), "first" : "kate", "last" : "bush", "dob" : "30/07/1958", "gender" : "f", "hair_colour" : "brown", "occupation" : "singer", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "blue", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "brown", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.update({nationality: 'irish'}, {$set: {hair_colour:'yellow'}},{multi:true});
+WriteResult({ "nMatched" : 2, "nUpserted" : 0, "nModified" : 2 })
+> db.myFirstMDB.find()
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2c"), "first" : "kate", "last" : "bush", "dob" : "30/07/1958", "gender" : "f", "hair_colour" : "brown", "occupation" : "singer", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "yellow", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "yellow", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.remove({first: 'kate', last: 'bush'});
+WriteResult({ "nRemoved" : 1 })
+> db.myFirstMDB.find()
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2b"), "first" : "john", "last" : "lennon", "dob" : "09/10/1940", "gender" : "m", "hair_colour" : "brown", "occupation" : "beatle", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2d"), "first" : "eve", "last" : "ryan", "dob" : "19/09/1992", "gender" : "f", "hair_colour" : "yellow", "occupation" : "developer", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2e"), "first" : "martha", "last" : "fenton", "dob" : "15/05/1974", "gender" : "f", "hair_colour" : "yellow", "occupation" : "manager", "nationality" : "irish" }
+{ "_id" : ObjectId("58514d5cc8794234ffb3ec2f"), "first" : "Neil", "last" : "Hanslem", "dob" : "14/07/1983", "gender" : "m", "hair_colour" : "blonde", "occupation" : "actor", "nationality" : "english" }
+{ "_id" : ObjectId("58514d5dc8794234ffb3ec30"), "first" : "Rocky", "last" : "Persolm", "dob" : "19/12/1994", "gender" : "f", "hair_colour" : "black", "occupation" : "activist", "nationality" : "american" }
+> db.myFirstMDB.remove({});
+WriteResult({ "nRemoved" : 5 })
+> db.myFirstMDB.find()
+> 
