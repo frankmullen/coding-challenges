@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar Chart</title>
+	<style>
+		body {
+          font: 16px sans-serif;
+        }
+        rect:hover {
+            fill: #FFA623;  /* fill with a yellow */
+        }
+        /*style tool tip*/
+        #tooltip {
+            position: absolute;
+            padding: 5px 10px; 
+            background: white; 
+            border-radius: 3px; 
+            font-family: dosis;   /* we need to import this font*/
+            font-weight: bold;  
+            box-shadow: 5px 2px 2px;/*add shadow*/
+        }
+        /*for tooltip*/
+        .hidden {
+            display: none;  
+        }
+        .axis text {
+          font: 10px sans-serif;
+        }
+         
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+	</style>
+</head>
+<body>
+
+</body>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="bar.js"></script>
+</html>
