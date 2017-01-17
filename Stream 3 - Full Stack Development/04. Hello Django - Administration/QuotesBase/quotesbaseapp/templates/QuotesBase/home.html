@@ -1,0 +1,14 @@
+<html>
+<head></head>
+<body>
+    <h1>List Of Quotes</h1>
+    {% block content %}
+        {% for quote in quotes_list %}
+            <p><strong>First Name: </strong>{{ quote.author_first_name }}</p>
+            <p><strong>Last Name: </strong>{{ quote.author_last_name }}</p>
+            <p><strong>Quote: </strong>{{ quote.quote }}</p>
+            <hr
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>
